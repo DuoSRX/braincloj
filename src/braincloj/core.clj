@@ -35,10 +35,6 @@
         "other"))
     prog))
 
-(defn find-matching-forward [prog cp]
-  (loop [p cp level 0]
-    (if (= (nth prog) :loop
-
 (defn parse
   "Parse a brainfuck string into a vector of keywords (see operators)"
   [prog]
