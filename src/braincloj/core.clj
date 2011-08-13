@@ -39,7 +39,7 @@
   "Parse a brainfuck string into a vector of keywords (see operators)"
   [prog]
   (vec (filter (complement nil?)
-	     (map #(operators %) prog))))
+	       (map #(operators %) prog))))
 
 (defn run
   "Run a correct brainfuck program, parsed with braincloj.core/parse"
@@ -60,5 +60,5 @@
 	;(println mem)
 	(recur cp mp mem)))))
 
-;hello world
-;"++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>."
+
+(def hello-world (parse "++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>."))
